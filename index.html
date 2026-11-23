@@ -12,11 +12,14 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-8 -11 116 116%27%3E%3Crect x=%27-8%27 y=%27-11%27 width=%27116%27 height=%27116%27 rx=%2722%27 fill=%27%231D3F8F%27/%3E%3Cg fill=%27%23fff%27%3E%3Cpath d=%27M0 10Q0 0 10 0H39V25H22V66H0Z%27/%3E%3Cpath d=%27M44 0H90Q100 0 100 10V94H82V25H44Z%27/%3E%3Crect x=%2726%27 y=%2746%27 width=%2752%27 height=%2720%27/%3E%3C/g%3E%3C/svg%3E">
 
 <!-- ============ GOOGLE (tag enviada pelo Google Ads) ============ -->
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-KNGSFLK3"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GTM-KNGSFLK3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+  gtag('config', 'GTM-KNGSFLK3');
+  gtag('config', 'AW-18587614679'); // conta do Google Ads
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1112,13 +1115,13 @@ footer a:hover{color:#fff}
 
   // ===== CONFIGURAÇÃO =====
   const WHATSAPP = '5541992451717';            // DDI + DDD + número, só dígitos. Ex.: 5511999998888
-  const CONVERSAO_WHATSAPP = 'AW-XXXXXXXXX/XXXXXXXXXXX'; // rótulo de conversão do Google Ads
+  const CONVERSAO_WHATSAPP = 'AW-18587614679/Fqv-CPjzzrwdENf7oZ9F'; // conversão "Solicitar cotação" do Google Ads
 
   function registrarConversao(origem){
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({event:'pedido_cotacao', origem: origem});
     if (typeof gtag === 'function'){
-      gtag('event','conversion',{send_to: CONVERSAO_WHATSAPP});
+      gtag('event','conversion',{send_to: CONVERSAO_WHATSAPP, value: 1.0, currency: 'BRL'});
       gtag('event','clique_whatsapp',{origem: origem});
     }
   }
