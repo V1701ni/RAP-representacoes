@@ -845,7 +845,7 @@ let tSalvar, tSalvo;
 function gravar(){
   tSalvar = null;
   try{ localStorage.setItem(CHAVE, JSON.stringify(E)); mostrarSalvo(); return true; }
-  catch(e){ aviso('Não foi possível salvar. Salve uma cópia de segurança e fale com a Ketelyn.', 8000); return false; }
+  catch(e){ aviso('Não foi possível salvar. Salve uma cópia de segurança e fale com o Vinicius.', 8000); return false; }
 }
 function salvar(){ clearTimeout(tSalvar); tSalvar = setTimeout(gravar, 200); }
 function salvarJa(){ clearTimeout(tSalvar); return gravar(); }
@@ -1071,7 +1071,7 @@ function faixa(txt, btn, acao){ return `<div class="faixa-info" role="status"><p
 function faixasInicio(){
   let h = '';
   const pct = espacoUsado()/LIMITE_ESPACO;
-  if(pct > 0.7) h += faixa(`O espaço do app está ficando cheio (${Math.round(pct*100)}% usado). Fale com a Ketelyn.`);
+  if(pct > 0.7) h += faixa(`O espaço do app está ficando cheio (${Math.round(pct*100)}% usado). Fale com o Vinicius.`);
   if(NUVEM && SINC.pronto && !SINC.u)
     h += faixa('Entre na sua conta para ver os orçamentos no celular e no computador.', 'Entrar', 'abrirLogin()');
   if(ativos().length){
@@ -1982,7 +1982,7 @@ function telaConfig(){
       <div style="margin-top:18px">
         <span style="font-size:15px;color:var(--suave)">Espaço usado no aparelho: <b style="color:var(--tinta)">${pct}%</b></span>
         <div class="medidor ${pct>70?'cheio':''}"><i style="width:${Math.max(2,pct)}%"></i></div>
-        ${pct>70 ? `<p class="dica-campo">O espaço do app está ficando cheio. Fale com a Ketelyn.</p>` : ''}
+        ${pct>70 ? `<p class="dica-campo">O espaço do app está ficando cheio. Fale com o Vinicius.</p>` : ''}
       </div>
     </div></section>
     <section class="bloco"><h2>Lixeira</h2><div class="cartao">
@@ -2399,7 +2399,7 @@ function mensagemErroLogin(e){
   if(/invalid-email/.test(c)) return 'Confira o e-mail.';
   if(/missing-password/.test(c)) return 'Digite a senha.';
   if(/too-many-requests/.test(c)) return 'Muitas tentativas. Espere alguns minutos e tente de novo.';
-  if(/user-disabled/.test(c)) return 'Esta conta está desativada. Fale com a Ketelyn.';
+  if(/user-disabled/.test(c)) return 'Esta conta está desativada. Fale com o Vinicius.';
   if(/network/.test(c) || navigator.onLine===false) return 'Sem internet. Tente de novo quando tiver sinal.';
   return 'Não foi possível entrar agora. Tente de novo.';
 }
