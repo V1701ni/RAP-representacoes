@@ -1,58 +1,72 @@
+[README-rap-representacoes.md](https://github.com/user-attachments/files/35495577/README-rap-representacoes.md)
+<div align="center">
 
-# RAP Representações: site institucional
+# 🏗️ RAP Representações
 
-Site da **RAP Representações**, empresa de representação comercial de aço que atende Curitiba e região metropolitana.
+**Site de representação comercial de aço em Curitiba e região metropolitana.**
 
-O objetivo do site é transformar quem chega pelo Google em um pedido de orçamento pelo WhatsApp. Por isso ele é direto: mostra o que a empresa vende, quais fábricas representa, onde atende e como funciona o pedido, sempre com um botão de contato por perto.
+![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Status](https://img.shields.io/badge/status-no_ar-1D3F8F?style=for-the-badge)
 
-🔗 **No ar:** https://rap-representacoes.onrender.com
-
-> Projeto real, em uso pela empresa e ligado a campanhas de Google Ads. Desenvolvido por **Vinicius Lima Pereira**, estudante de Sistemas de Informação.
+</div>
 
 ---
 
-## Seções do site
+## Sobre
 
-- **Topo:** logo da marca e menu fixo, com atalho para o WhatsApp.
-- **Abertura:** a chamada principal, o botão "Cotar agora no WhatsApp" e um quadro de orçamento sem compromisso.
-- **Faixa de destaque:** 25 anos de experiência e a área de atendimento.
-- **Empresas representadas:** Steelcorte, Troguer, Kitofer, Sanfer Aço e Itajé.
-- **Produtos:**
-  - chapas e bobinas;
-  - perfis estruturais dobrados;
-  - tubos;
-  - telhas, incluindo as cumeeiras;
-  - corte a laser, plasma e oxicorte.
+Site da **RAP Representações**, representação comercial de aço que atende construção civil, indústria, serralherias e agronegócio. O site apresenta as linhas de produto e leva o cliente a pedir uma cotação pelo WhatsApp. É divulgado em campanhas do Google Ads.
 
-  Cada grupo tem um botão que abre o WhatsApp com a mensagem já escrita.
-- **Sobre o representante:** apresentação e diferenciais.
-- **Obras e entregas:** fotos de materiais entregues.
-- **Segmentos atendidos:** construção civil, indústria, serralherias e agronegócio.
-- **Área de atendimento:** mapa ilustrado de Curitiba e das cidades da região metropolitana.
-- **Como funciona:** o caminho do orçamento até a entrega, em 4 passos.
-- **Perguntas frequentes** e **contato**.
-- **Política de privacidade**, porque o site usa a medição do Google Ads.
-- **Botão flutuante do WhatsApp** em todas as telas.
+## Seções
+
+| Seção | Conteúdo |
+|---|---|
+| **Início** | Chamada principal e botão de orçamento |
+| **Produtos** | Chapas e bobinas, perfis estruturais dobrados, perfis especiais, tubos, telhas, degraus e corte a laser, plasma e oxicorte |
+| **Representante** | Apresentação do representante comercial e da economia que a representação gera |
+| **Representadas** | Materiais produzidos pelas empresas representadas |
+| **Para quem** | Construção civil, indústria, serralherias e agronegócio |
+| **Região** | Curitiba e região metropolitana |
+| **Como funciona** | Do orçamento à entrega em 4 passos |
+| **Depoimentos** | Avaliações de clientes |
+| **Perguntas frequentes** | Dúvidas comuns em blocos que abrem e fecham |
+| **Orçamento** | Formulário que monta a mensagem e abre o WhatsApp |
 
 ## Destaques técnicos
 
-- **Arquivo único:** o site inteiro fica em um `index.html`, com estilos, imagens (WebP) e ícones embutidos. Um script de build junta tudo isso e gera o arquivo final.
-- **Responsivo:** pensado primeiro para o celular. Foi testado em telas de 360 a 1440 px, sem rolagem lateral.
-- **Conversões do Google Ads:** o clique no WhatsApp é registrado como conversão (tag `gtag`), para medir se a campanha está trazendo contatos de verdade.
-- **SEO e compartilhamento:** título e descrição para o Google, e tags Open Graph para quando o link é enviado no WhatsApp.
-- **Identidade visual:** logo redesenhado com efeito metálico, degradê azul da marca e verde reservado só para o WhatsApp.
-- **Hospedagem:** site estático no Render, publicado automaticamente a cada commit.
+- **Formulário de cotação**: nome, empresa, cidade da entrega, telefone, produto e lista de materiais viram uma mensagem pronta no WhatsApp.
+- **Arquivo único**: HTML, CSS, JavaScript e imagens no mesmo arquivo, sem framework.
+- **Responsivo**, com imagens carregadas sob demanda (`loading="lazy"`).
+- **Medição de conversões**: Google Tag Manager e Google Ads registram os pedidos de cotação e os cliques no WhatsApp e no telefone.
+- **SEO**: título, descrição e Open Graph pensados para a busca local.
+- **Acessibilidade**: animações reduzidas para quem prefere menos movimento (`prefers-reduced-motion`).
+- **Política de privacidade** em janela própria, com dados coletados, cookies e anúncios, e direitos do usuário.
 
 ## Tecnologias
 
-HTML, CSS e JavaScript puro, sem framework. Script de build em Python e testes visuais com Playwright, em telas de celular e de computador. Hospedagem no Render e medição com Google Ads.
+| Parte | Tecnologia |
+|---|---|
+| Estrutura e estilo | HTML e CSS puros |
+| Interações | JavaScript puro |
+| Fonte | Barlow (Google Fonts) |
+| Métricas | Google Tag Manager e Google Ads |
+| Hospedagem | Render (site estático, publicado a partir do GitHub) |
 
 ## Projeto relacionado
 
-- **Orçamentos RAP:** app web que a empresa usa para montar os orçamentos, gerar o PDF e enviar pelo WhatsApp. Ele funciona no celular e no computador, com sincronização pela nuvem (Firebase). Fica em um repositório próprio.
+O representante monta e envia as cotações pelo **[RAP Orçamentos](https://rap-representa-es-or-amentos.onrender.com)**, app de orçamentos e pedidos que também desenvolvi.
+
+## Como rodar
+
+Não precisa instalar nada. Abra o `index.html` no navegador.
+
+Para publicar, envie o arquivo para qualquer hospedagem estática, como Render, GitHub Pages ou Netlify.
 
 ---
 
-## Autor
+<div align="center">
 
-**Vinicius Lima Pereira**: estudante de Sistemas de Informação na Universidade Positivo, em Curitiba (PR).
+Desenvolvido por **[Vinicius Lima Pereira](https://github.com/V1701ni)**.
+
+</div>
